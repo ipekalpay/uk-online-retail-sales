@@ -1,0 +1,6 @@
+segment,customers,pct_customers,revenue_gbp,pct_revenue,avg_spend_gbp,avg_days_since_last_order
+Champions,1464,25.1,11550509.0,70.1,7890.0,20
+Loyal,1215,20.8,2394745.0,14.5,1971.0,78
+At risk,824,14.1,1429672.0,8.7,1735.0,369
+Lost / low value,1892,32.4,850553.0,5.2,450.0,385
+New / promising,444,7.6,241596.0,1.5,544.0,27

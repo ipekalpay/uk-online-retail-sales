@@ -1,0 +1,8 @@
+step,rows
+Raw rows (both sheets),1067371
+After removing exact duplicates,1033036
+After removing cancellations (invoice starts with C),1013932
+After removing orders that were later cancelled,1007600
+After removing zero/negative quantity or price,1001582
+"After removing postage, fees and manual adjustments",997238
+Rows with a customer ID (used for customer analysis),770400
