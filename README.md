@@ -18,8 +18,7 @@ When does the business make its money, which products drive it, and which custom
    - Removed cancellations (invoices starting with `C`) **and the original orders they cancelled**. Matching each cancellation back to its order was key: without it, a mistaken order of 80,995 units of one paper craft item, cancelled minutes later, appeared as the #3 product.
    - Excluded postage, bank charges and manual adjustments, which are not products.
 2. **Analysed in SQL** ([`sql/analysis_queries.sql`](sql/analysis_queries.sql), SQLite): monthly KPIs, year-on-year growth with `LAG`, product and country rankings, and an **RFM segmentation** using CTEs and `NTILE(5)`. Results are in [`sql/query_results.txt`](sql/query_results.txt).
-3. **Visualised in Python** ([notebook](notebooks/uk_online_retail_analysis.ipynb)) and exported summary tables for the dashboard.
-4. **Built an interactive dashboard** in Power BI (see [`dashboard/`](dashboard/)).
+3. **Visualised in Python** ([notebook](notebooks/uk_online_retail_analysis.ipynb)) and exported summary tables.
 
 ## Key findings
 | # | Finding |
@@ -50,11 +49,10 @@ Segments: **Champions** (R≥4, F≥4) · **Loyal** (R≥3, F≥3) · **New / pr
 | Path | Contents |
 |---|---|
 | `data/retail_clean.csv.gz` | Cleaned transactions (gzip CSV) |
-| `data/*.csv` | Summary tables exported for the dashboard (monthly sales, products, countries, RFM) |
+| `data/*.csv` | Summary tables (monthly sales, products, countries, RFM segments) |
 | `scripts/` | Cleaning and SQLite loading scripts |
 | `sql/` | Analysis queries and their results |
 | `notebooks/` | Jupyter notebook with charts |
-| `dashboard/` | Power BI dashboard file and screenshot |
 
 ## How to reproduce
 ```bash
@@ -65,6 +63,6 @@ python scripts/02_load_sqlite.py
 ```
 
 ## Tools
-Python (pandas, Matplotlib) · SQL (SQLite: CTEs, window functions) · Power BI · Jupyter
+Python (pandas, Matplotlib) · SQL (SQLite: CTEs, window functions) · Jupyter
 
 *Data: Chen, D. (2012). Online Retail II. UCI Machine Learning Repository, CC BY 4.0.*
